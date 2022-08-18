@@ -1,4 +1,4 @@
-Hands on demo using Cluster API. 
+#Hands on demo using Cluster API. 
 
 What is Cluster API?  
 https://cluster-api.sigs.k8s.io/introduction.html. 
@@ -23,14 +23,17 @@ EOF
 ```
 
 Then follow the instruction for your kind version using 
+```
 kind create cluster --config kind-cluster-with-extramounts.yaml 
+```
 to create the management cluster using the above file.
 
-output is below
-￼
+output is below. 
 
-kubectl get all -A 
-￼
+
+kubectl get all -A. 
+<img width="675" alt="Creating cluster kind" src="https://user-images.githubusercontent.com/66551005/185342782-e6aeff80-4aca-4626-8b28-709c30ec317a.png">
+
 
 Install clusterctl with homebrew on macOS and linux
 Install the latest release using homebrew:
