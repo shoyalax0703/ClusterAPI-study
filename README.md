@@ -1,4 +1,4 @@
-#Hands on demo using Cluster API. 
+# Hands on demo using Cluster API. 
 
 What is Cluster API?  
 https://cluster-api.sigs.k8s.io/introduction.html. 
@@ -46,15 +46,15 @@ Test to ensure the version you installed is up-to-date:
 clusterctl version
 ```
 
-##Now that we’ve got clusterctl installed and all the prerequisites in place.  
+## Now that we’ve got clusterctl installed and all the prerequisites in place.  
 
 follwing command enable your cluster into management cluster. 
 
-# Enable the experimental Cluster topology feature.  
+#Enable the experimental Cluster topology feature.  
 ```
 export CLUSTER_TOPOLOGY=true
 ```
-# Initialize the management cluster. 
+#Initialize the management cluster. 
 ```
 clusterctl init --infrastructure docker
 ```
@@ -65,13 +65,13 @@ outpot is below
 
 次のコマンドでworkload cluster を作成可能. 
 ```
-# The list of service CIDR, default ["10.128.0.0/12"]
+#The list of service CIDR, default ["10.128.0.0/12"]
 export SERVICE_CIDR=["10.96.0.0/12"]
 
-# The list of pod CIDR, default ["192.168.0.0/16"]
+#The list of pod CIDR, default ["192.168.0.0/16"]
 export POD_CIDR=["192.168.0.0/16"]
 
-# The service domain, default "cluster.local"
+#The service domain, default "cluster.local"
 export SERVICE_DOMAIN="k8s.test"
 
 It is also possible but not recommended to disable the per-default enabled Pod Security Standard:
@@ -121,7 +121,7 @@ kubectl --kubeconfig=./capi-quickstart.kubeconfig get nodes
 <img width="1653" alt="Screen Shot 2022-08-18 at 14 58 05" src="https://user-images.githubusercontent.com/66551005/185345257-7e1fb132-4293-4a7d-be4b-18242e74ea0e.png">
 
 
-##Clean up. 
+## Clean up. 
 ```
 kubectl delete cluster capi-quickstart
 kind delete cluster
